@@ -1,0 +1,146 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+a {
+  text-decoration: none;
+}
+
+@import "bootstrap/bootstrap.scss";
+
+// header
+header {
+  background: $gray-900;
+}
+
+.menu-logo {
+  width: 100px;
+}
+
+.navbar {
+  padding: 0 1rem;
+}
+
+.menu {
+  &-item {
+    padding: 30px 25px;
+    a {
+      color: $white;
+    }
+  }
+
+  &-highlight {
+    background-color: $gold;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .menu {
+    padding: 10px 0px;
+    &-item {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    &-highlight {
+      background-color: transparent;
+      a {
+        color: $gold;
+      }
+    }
+  }
+}
+
+// main
+.section {
+  padding: 100px 0;
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+}
+
+#hwa {
+  background-color: $white-100;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: contain;
+
+  @include media-breakpoint-up(sm) {
+    background-image: url(../img/who_we_are.png);
+  }
+}
+
+.hwa--content {
+  display: flex;
+  align-items: center;
+}
+
+.bracket {
+  height: 420px;
+  border-bottom: 15px solid #cd9c2e;
+  border-top: 15px solid #cd9c2e;
+  width: 30px;
+}
+
+.bracket-left {
+  border-left: 15px solid #cd9c2e;
+  float: right;
+}
+
+.bracket-right {
+  border-right: 15px solid #cd9c2e;
+  float: left;
+}
+
+// our mission
+.square-box {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+
+  .square-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    > img {
+      height: 100%;
+    }
+  }
+}
+
+// our objective
+#oro {
+  background-color: $black-100;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+
+  @include media-breakpoint-up(sm) {
+    background-image: url(../img/our_objective.png);
+  }
+
+  text-align: center;
+
+  h2 {
+    color: $gold;
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: lighter;
+    color: white;
+  }
+}
+
+// helpers
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
