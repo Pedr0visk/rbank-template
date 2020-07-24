@@ -1,8 +1,4 @@
 @charset "UTF-8";
-a {
-  text-decoration: none;
-}
-
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -9913,6 +9909,24 @@ h3 {
     border-color: #dee2e6;
   }
 }
+html {
+  font-size: 15px;
+}
+html ::-webkit-scrollbar {
+  width: 8px;
+}
+html ::-webkit-scrollbar-thumb {
+  background: #c79d2f;
+  border-radius: 4px;
+}
+html ::-webkit-scrollbar-track {
+  background-color: #343a40;
+}
+
+a {
+  text-decoration: none;
+}
+
 header {
   background: #212529;
 }
@@ -9970,17 +9984,16 @@ header {
     background-image: url(../img/who_we_are.png);
   }
 }
-
-.hwa--content {
-  display: flex;
-  align-items: center;
-}
-
-.bracket {
+#hwa .bracket {
   height: 420px;
   border-bottom: 15px solid #cd9c2e;
   border-top: 15px solid #cd9c2e;
   width: 30px;
+}
+
+.hwa--content {
+  display: flex;
+  align-items: center;
 }
 
 .bracket-left {
@@ -10013,7 +10026,8 @@ header {
 }
 
 #oro {
-  background-color: #171717;
+  position: relative;
+  background-color: #000;
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -10021,16 +10035,60 @@ header {
 }
 @media (min-width: 576px) {
   #oro {
-    background-image: url(../img/our_objective.png);
+    background-image: url(../img/our_objective.jpg);
   }
 }
 #oro h2 {
+  font-size: 24px;
   color: #c79d2f;
 }
 #oro p {
   font-size: 22px;
   font-weight: lighter;
   color: white;
+}
+
+#prod {
+  background-image: url(../img/pig-coin.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: auto;
+  min-height: 500px;
+}
+#prod .nav {
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 1px solid;
+}
+#prod .nav > a {
+  color: black;
+  flex: 1;
+  border: 0;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px 25px;
+}
+#prod .nav > a.active {
+  box-shadow: inset 0 -4px 0 #c79d2f;
+  background: transparent;
+}
+#prod .nav .nav-tabs .nav-link.active,
+#prod .nav .nav-tabs .nav-item.show .nav-link {
+  border-bottom: 2px solid red;
+}
+#prod .tab-content {
+  padding: 2rem 1rem;
+}
+#prod .prod--title {
+  font-size: 30px;
+  font-weight: lighter;
+}
+#prod .bracket {
+  height: 200px;
+  border-bottom: 15px solid #cd9c2e;
+  border-top: 15px solid #cd9c2e;
+  width: 30px;
 }
 
 .no-gutters {
