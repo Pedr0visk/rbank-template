@@ -38,20 +38,35 @@ header {
   width: 100px;
 }
 
-.navbar {
-  padding: 0 1rem;
-}
-
 .menu {
+  height: auto;
+
   &-item {
-    padding: 30px 25px;
-    a {
+    > a {
       color: $white;
+      &:hover {
+        text-decoration: none;
+        color: $gold;
+      }
     }
   }
 
-  &-highlight {
-    background-color: $gold;
+  @include media-breakpoint-up(lg) {
+    height: 78px;
+    &-item {
+      > a {
+        padding: 30px 25px;
+      }
+    }
+    &-highlight {
+      a {
+        background-color: $gold;
+        &:hover {
+          background-color: darken($color: $gold, $amount: 2);
+          color: white;
+        }
+      }
+    }
   }
 }
 
@@ -80,6 +95,24 @@ header {
   }
 }
 
+// carousel
+.carousel-item {
+  position: relative;
+
+  .carousel-content {
+    max-width: 400px;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+
+    h4 {
+      font-size: 3rem;
+    }
+  }
+}
+
+// who we are
 #hwa {
   background-color: $white-100;
   background-repeat: no-repeat;

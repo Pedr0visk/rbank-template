@@ -9938,18 +9938,30 @@ header .navbar .navbar-toggler {
   width: 100px;
 }
 
-.navbar {
-  padding: 0 1rem;
+.menu {
+  height: auto;
 }
-
-.menu-item {
-  padding: 30px 25px;
-}
-.menu-item a {
+.menu-item > a {
   color: #fff;
 }
-.menu-highlight {
-  background-color: #c79d2f;
+.menu-item > a:hover {
+  text-decoration: none;
+  color: #c79d2f;
+}
+@media (min-width: 992px) {
+  .menu {
+    height: 78px;
+  }
+  .menu-item > a {
+    padding: 30px 25px;
+  }
+  .menu-highlight a {
+    background-color: #c79d2f;
+  }
+  .menu-highlight a:hover {
+    background-color: #bf962d;
+    color: white;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -9974,6 +9986,20 @@ header .navbar .navbar-toggler {
   .section {
     padding: 40px 0;
   }
+}
+
+.carousel-item {
+  position: relative;
+}
+.carousel-item .carousel-content {
+  max-width: 400px;
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+.carousel-item .carousel-content h4 {
+  font-size: 3rem;
 }
 
 #hwa {
